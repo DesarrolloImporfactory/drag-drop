@@ -2,8 +2,8 @@
 
 return [
     'id' => 'spacer',
-    'name' => __('Spacer'),
+    'name' => __('Espaciador'),
     'icon' => '<i class="icon-credit-card"></i>',
-    'tab' => "Common",
+    'tab' => "Común",
     'fields' => []
 ];

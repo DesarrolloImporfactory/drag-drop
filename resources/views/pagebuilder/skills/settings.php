@@ -4,35 +4,35 @@ return [
     'id' => 'skills',
     'name' => __('Skills'),
     'icon' => '<i class="icon-briefcase"></i>',
-    'tab' => "About us",
+    'tab' => "Acerca de nosotros",
     'fields' => [
         [
             'id'            => 'image',
             'type'          => 'file',
-            'field_desc' => __('only .jpg,.png allowed and max size is 3MB'),
+            'field_desc' => __('solo .jpg,.png permitido y tamaño máximo es 3MB'),
             'max_size' => 3, // size in MB
             'ext' => [
                 'jpg',
                 'png',
             ],
-            'label_title'   => __('Image')
+            'label_title'   => __('Imagen')
         ],
         [
             'id'            => 'small-heading',
             'type'          => 'text',
-            'value'         => 'Before we dive in to the your career, tell me a little.',
+            'value'         => 'Antes de meternos de lleno en su carrera, cuénteme un poco.',
             'class'         => '',
-            'label_title'   => __('Small heading'),
-            'placeholder'   => __('Small heading'),
+            'label_title'   => __('Sub cabecera'),
+            'placeholder'   => __('Sub cabecera'),
 
         ],
         [
             'id'            => 'heading',
             'type'          => 'text',
-            'value'         => 'Apple opens another megastore in China amid William Barr',
+            'value'         => 'Apple abre otra megatienda en China en medio de William Barr.',
             'class'         => '',
-            'label_title'   => __('Heading'),
-            'placeholder'   => __('Heading'),
+            'label_title'   => __('Cabecera'),
+            'placeholder'   => __('Cabecera'),
 
         ],
         [
@@ -40,8 +40,8 @@ return [
             'type'          => 'editor',
             'value'         => 'Lorem Ipsum',
             'class'         => '',
-            'label_title'   => __('Paragraph'),
-            'placeholder'   => __('Paragraph'),
+            'label_title'   => __('Párrafo'),
+            'placeholder'   => __('Párrafo'),
 
         ],
         [
@@ -49,8 +49,8 @@ return [
             'type'          => 'text',
             'value'         => '548,324',
             'class'         => '',
-            'label_title'   => __('Counter'),
-            'placeholder'   => __('Counter'),
+            'label_title'   => __('Contador'),
+            'placeholder'   => __('Contador'),
 
         ],
         [
@@ -58,8 +58,8 @@ return [
             'type'          => 'text',
             'value'         => 'All lorem ipsum text counter',
             'class'         => '',
-            'label_title'   => __('Counter text'),
-            'placeholder'   => __('Counter text'),
+            'label_title'   => __('Texto del contador'),
+            'placeholder'   => __('Texto del contador'),
 
         ],
         [
@@ -67,8 +67,8 @@ return [
             'type'          => 'text',
             'value'         => 'Buy edition now',
             'class'         => '',
-            'label_title'   => __('Button text'),
-            'placeholder'   => __('Button text'),
+            'label_title'   => __('Texto del botón'),
+            'placeholder'   => __('Texto del botón'),
 
         ],
     ]

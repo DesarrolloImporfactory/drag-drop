@@ -4,29 +4,29 @@ return [
     'id' => 'banner',
     'name' => __('Banner'),
     'icon' => '<i class="icon-book-open"></i>',
-    'tab' => "About us",
+    'tab' => "Acerca de nosotros",
     'fields' => [
         [
             'id'            => 'banner_image',
             'type'          => 'file',
-            'field_desc' => __('only .jpg,.png allowed and max size is 3MB'),
+            'field_desc' => __('Solo .jpg,.png permitido y tamaño máximo es 3MB'),
             'max_size' => 3, // size in MB
             'ext' => [
                 'jpg',
                 'png',
             ],
-            'label_title'   => __('Banner image')
+            'label_title'   => __('Imagen del banner')
         ],
 
         [
             'id'            => 'caption',
             'type'          => 'text',
-            'value'         => 'Tech photo with dimension',
+            'value'         => 'Fotografía técnica con dimensión',
             'class'         => '',
             'label_title'   => __('Image caption'),
             'placeholder'   => __('Image caption'),
             'hint'     => [
-                'content' => __('The caption below the image'),
+                'content' => __('Leyenda de la imagen'),
             ],
         ],
 

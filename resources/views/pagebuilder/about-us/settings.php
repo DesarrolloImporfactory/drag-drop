@@ -2,26 +2,26 @@
 
 return [
     'id' => 'about-us',
-    'name' => __('About Us'),
+    'name' => 'Acerca de nosotros',
     'icon' => '<i class="icon-clipboard"></i>',
-    'tab' => "About us",
+    'tab' => "Acerca de nosotros",
     'fields' => [
         [
             'id'            => 'small-heading',
             'type'          => 'text',
-            'value'         => 'Before we dive in to the your career, tell me a little.',
+            'value'         => 'Antes de meternos de lleno en su carrera, cuénteme un poco.',
             'class'         => '',
-            'label_title'   => __('Small heading'),
-            'placeholder'   => __('Small heading'),
+            'label_title'   => __('Sub cabecera'),
+            'placeholder'   => __('Sub cabecera'),
 
         ],
         [
             'id'            => 'heading',
             'type'          => 'text',
-            'value'         => 'Apple opens another megastore in China amid William Barr',
+            'value'         => 'Apple abre otra megatienda en China en medio de William Barr.',
             'class'         => '',
-            'label_title'   => __('Heading'),
-            'placeholder'   => __('Heading'),
+            'label_title'   => __('Cabecera'),
+            'placeholder'   => __('Cabecera'),
 
         ],
         [
@@ -29,31 +29,31 @@ return [
             'type'          => 'editor',
             'value'         => 'Lorem Ipsum',
             'class'         => '',
-            'label_title'   => __('Paragraph'),
-            'placeholder'   => __('Paragraph'),
+            'label_title'   => __('Párrafo'),
+            'placeholder'   => __('Párrafo'),
 
         ],
         [
             'id'                => 'bullets',
             'type'              => 'repeater',
-            'label_title'       => __('Bullets'),
-            'label_desc'        => __('This is the repeator description you can use here'),
+            'label_title'       => __('Viñetas'),
+            'label_desc'        => __('Esta es la descripción del repetidor que puede utilizar aquí'),
             'field'             => [
                 'id'            => 'bullets-point',
                 'type'          => 'text',
-                'value'         => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
+                'value'         => 'Lorem Ipsum es simplemente un texto ficticio de la industria de la impresión y la composición tipográfica.',
                 'class'         => '',
-                'label_title'   => __('Bullet point'),
-                'placeholder'   => __('Bullet point'),
+                'label_title'   => __('Viñeta'),
+                'placeholder'   => __('Viñeta'),
             ]
         ],
         [
             'id'            => 'blue-cta',
             'type'          => 'text',
-            'value'         => 'Join us today',
+            'value'         => 'Unirse a nosotros',
             'class'         => '',
-            'label_title'   => __('Blue Button text'),
-            'placeholder'   => __('Blue Button text'),
+            'label_title'   => __('Texto del botón azul'),
+            'placeholder'   => __('Texto del botón azul'),
 
         ],
         [
@@ -61,26 +61,26 @@ return [
             'type'          => 'text',
             'value'         => '#',
             'class'         => '',
-            'label_title'   => __('Blue Button URL'),
-            'placeholder'   => __('Blue Button URL'),
+            'label_title'   => __('URL del botón azul'),
+            'placeholder'   => __('URL del botón azul'),
 
         ],
         [
             'id'            => 'white-cta',
             'type'          => 'text',
-            'value'         => 'Cancel',
+            'value'         => 'Cancelar',
             'class'         => '',
-            'label_title'   => __('White Button text'),
-            'placeholder'   => __('White Button text'),
+            'label_title'   => __('Texto del botón blanco'),
+            'placeholder'   => __('Texto del botón blanco'),
 
         ],
         [
             'id'            => 'white-cta-url',
             'type'          => 'text',
-            'value'         => 'Cancel',
+            'value'         => 'Cancelar',
             'class'         => '',
-            'label_title'   => __('White Button URL'),
-            'placeholder'   => __('White Button URL'),
+            'label_title'   => __('URL del botón blanco'),
+            'placeholder'   => __('URL del botón blanco'),
 
         ],
 
@@ -89,20 +89,20 @@ return [
             'type'          => 'editor',
             'value'         => 'Lorem Ipsum',
             'class'         => '',
-            'label_title'   => __('Paragraph'),
-            'placeholder'   => __('Paragraph'),
+            'label_title'   => __('Párrafo'),
+            'placeholder'   => __('Párrafo'),
 
         ],
         [
             'id'            => 'aboutus_image',
             'type'          => 'file',
-            'field_desc' => __('only .jpg,.png allowed and max size is 3MB'),
+            'field_desc' => __('Solo .jpg,.png permitido y tamaño máximo es 3MB'),
             'max_size' => 3, // size in MB
             'ext' => [
                 'jpg',
                 'png',
             ],
-            'label_title'   => __('About us image')
+            'label_title'   => __('Acerca de nosotros imagen')
         ],
 
     ]
