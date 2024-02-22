@@ -1,9 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
-require __DIR__ . '/optionbuilder.php';
-require __DIR__ . '/pagebuilder.php';
+use App\Http\Controllers\LoginController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,5 +14,13 @@ require __DIR__ . '/pagebuilder.php';
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('/login');
 });
+
+// se define la ruta para el controlador de la pagina principal que es un login
+Route::get('/login', [LoginController::class, "index"])->name('login');
+Route::post('/login', [LoginController::class, "login"]);
+Route::post('/logout',  [LoginController::class, "logout"])->name('logout');
+
+require __DIR__ . '/optionbuilder.php';
+require __DIR__ . '/pagebuilder.php';

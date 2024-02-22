@@ -23,8 +23,8 @@ return [
             'type'          => 'text',
             'value'         => 'Fotografía técnica con dimensión',
             'class'         => '',
-            'label_title'   => __('Image caption'),
-            'placeholder'   => __('Image caption'),
+            'label_title'   => __('Leyenda de la imagen'),
+            'placeholder'   => __('Leyenda de la imagen'),
             'hint'     => [
                 'content' => __('Leyenda de la imagen'),
             ],

@@ -7,18 +7,28 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Cache;
 use Larabuild\Pagebuilder\Facades\PageSettings;
+use Spatie\Permission\Models\Role;
+use Spatie\Permission\Models\Permission;
+use Illuminate\Support\Facades\Auth;
 
-class PageController extends Controller {
+class PageController extends Controller
+{
     /**
      * Display a listing of the pages.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request) {
+    public function index(Request $request)
+    {
+        if (!auth()->check()) {
+            return redirect('/login');
+        }
         $edit = false;
-        $pages = Page::when($request->input('search'), fn ($q) => $q->where('name', 'like',  '%' . $request->input('search') . '%'))->orderBy('id', $request->input('sort') ?? 'asc')->paginate($request->input('per_page') ?? 10);
 
+        $pages = Page::where('user_id', auth()->user()->id)->when($request->input('search'), fn ($q) => $q->where('name', 'like',  '%' . $request->input('search') . '%'))->orderBy('id', $request->input('sort') ?? 'asc')->paginate($request->input('per_page') ?? 10);
+        //$pages = Page::when($request->input('search'), fn ($q) => $q->where('name', 'like',  '%' . $request->input('search') . '%'))->orderBy('id', $request->input('sort') ?? 'asc')->paginate($request->input('per_page') ?? 10);
 
+        $user = auth()->user();
         $pagesList = view('pagebuilder::components.pages-list', compact('pages'))->render();
 
         $per_page_opt = perPageOpt();
@@ -27,7 +37,7 @@ class PageController extends Controller {
             return response()->json(['success' => true, 'html' => $pagesList]);
         }
 
-        return view('pagebuilder::pages', compact('pagesList', 'per_page_opt', 'edit'));
+        return view('pagebuilder::pages', compact('pagesList', 'per_page_opt', 'edit', 'user'));
     }
 
 
@@ -36,7 +46,8 @@ class PageController extends Controller {
      *
      * @return \Illuminate\Http\Response
      */
-    public function create(Request $request) {
+    public function create(Request $request)
+    {
         $edit = false;
 
         $page = [];
@@ -54,7 +65,8 @@ class PageController extends Controller {
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request) {
+    public function store(Request $request)
+    {
         if (isDemoSite())
             return response()->json(['success' => 'demo']);
         return PageSettings::storePage($request);
@@ -67,7 +79,8 @@ class PageController extends Controller {
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id) {
+    public function show($id)
+    {
         //
     }
 
@@ -77,7 +90,8 @@ class PageController extends Controller {
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Request $request, $id) {
+    public function edit(Request $request, $id)
+    {
         $edit = true;
 
         $page = Page::findOrFail($id);
@@ -94,7 +108,8 @@ class PageController extends Controller {
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id) {
+    public function update(Request $request, $id)
+    {
         //
     }
 
@@ -104,7 +119,8 @@ class PageController extends Controller {
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id) {
+    public function destroy($id)
+    {
         if (isDemoSite())
             return response()->json(['success' => 'demo']);
         Page::find($id)->delete();

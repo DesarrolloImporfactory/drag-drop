@@ -17,6 +17,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+$authMiddleware = ["auth"];
+$permissionMiddleware = ["permission:manage_pages"];
+
+
+
 $page = Route::controller(PageController::class);
 $pBuilder = Route::controller(PageBuilderController::class);
 
@@ -31,7 +36,7 @@ if (!empty(config('pagebuilder.route_middleware'))) {
 }
 
 $page->group(function () {
-    Route::get('pages', 'index')->name('pagebuilder');
+    Route::get('pages', 'index')->name('pagebuilder')->middleware('permission:manage_pages');
     Route::get('pages/{page}/edit', 'edit')->name('page.edit');
     Route::post('pages', 'store')->name('page.store');
     Route::put('pages/{page}', 'update')->name('page.update');
@@ -53,4 +58,4 @@ Route::get('pages/{id}/iframe', [PageBuilderController::class, 'iframe'])->name(
 Route::any('/{any}', function () {
     $builder = new PageBuilderController();
     return $builder->renderPage(request()->path());
-})->where('any', '.*')->name('pagebuilder.page');
+})->where('any', '.*')->name('pagebuilder.page')->middleware($authMiddleware);
