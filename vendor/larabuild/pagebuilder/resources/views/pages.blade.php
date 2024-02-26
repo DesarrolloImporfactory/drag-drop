@@ -4,6 +4,8 @@
 <link rel="stylesheet" href="{{ asset('vendor/optionbuilder/css/feather-icons.css') }}">
 <link rel="stylesheet" href="{{ asset('vendor/optionbuilder/css/jquery-confirm.min.css') }}">
 <link rel="stylesheet" href="{{ asset('vendor/pagebuilder/css/pages.css') }}">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
 @endpush
 
 @section(config('pagebuilder.section'))
@@ -13,7 +15,7 @@
 
 <div class="flex text-end">
     <span>
-        Hola {{ Auth::user()->name }}
+        Hola {{ Auth::user()->name }} 
     </span>
    <form action="/logout" method="POST">
     @csrf

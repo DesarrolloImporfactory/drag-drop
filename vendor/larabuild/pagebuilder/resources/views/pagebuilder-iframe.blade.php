@@ -3,6 +3,8 @@
 @push(config('pagebuilder.site_style_var'))
     <link rel="stylesheet" href="{{ asset('vendor/optionbuilder/css/feather-icons.css') }}">
     <link rel="stylesheet" href="{{ asset('vendor/pagebuilder/css/larabuild-iframe.css') }}">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
 @endpush
 
 @section(config('pagebuilder.site_section'))
