@@ -58,4 +58,4 @@ Route::get('pages/{id}/iframe', [PageBuilderController::class, 'iframe'])->name(
 Route::any('/{any}', function () {
     $builder = new PageBuilderController();
     return $builder->renderPage(request()->path());
-})->where('any', '.*')->name('pagebuilder.page')->middleware($authMiddleware);
+})->where('any', '.*')->name('pagebuilder.page');
