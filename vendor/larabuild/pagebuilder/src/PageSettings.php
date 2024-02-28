@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Validator;
 
 class PageSettings
 {
+    protected $connection = 'suit';
 
     public $sectionId;
     public $directory;
@@ -57,6 +58,7 @@ class PageSettings
                 if (empty($pageData['slug']))
                     $pageData['slug'] = null;
                 Page::updateOrCreate(['id' => $pageData['id'] ?? null], $pageData);
+
 
                 if (!empty($pageData['id']))
                     Cache::forget('pagebuilder__pageData_' . $pageData['id']);

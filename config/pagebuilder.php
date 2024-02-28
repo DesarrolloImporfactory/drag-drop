@@ -29,5 +29,5 @@ return [
     // assets publishing
     'add_bootstrap'                         => 'yes',                            // yes/no to add/remove bootstrap assets from the package 
     'add_jquery'                            => 'yes',                            // yes/no to add/remove jquery js from the package
-
+    'db_connection'                         => 'suit',                           // database connection name
 ];

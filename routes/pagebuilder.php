@@ -36,7 +36,7 @@ if (!empty(config('pagebuilder.route_middleware'))) {
 }
 
 $page->group(function () {
-    Route::get('pages', 'index')->name('pagebuilder')->middleware('permission:manage_pages');
+    Route::get('pages', 'index')->name('pagebuilder');
     Route::get('pages/{page}/edit', 'edit')->name('page.edit');
     Route::post('pages', 'store')->name('page.store');
     Route::put('pages/{page}', 'update')->name('page.update');
