@@ -1,5 +1,5 @@
 @extends('layouts.templates.page')
-
+@section('title', 'Iniciar sesión')
 @section('content')
    <section class="grid place-content-center h-screen  items-center bg-gray-100">
     <article class="max-w-[280px] " >
