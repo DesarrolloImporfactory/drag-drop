@@ -2,7 +2,7 @@
 
 return [
     'id' => 'formulario',
-    'name' => __('Formulario'),
+    'name' => __('Formularios'),
     'icon' => '<i class="bx bx-task"></i>',
     'tab' => "Ecommerce",
     'fields' => [
@@ -32,10 +32,10 @@ return [
                     'placeholder'   => __('Nombre'),
                 ],
                 [
-                    'id' => 'tipo', // 'id' => 'cod_producto',
-                    'name' => 'tipo',
+                    'id' => 'tipom', // 'id' => 'cod_producto',
+                    'name' => 'tipom',
                     'type' => 'select',
-                    'label_title' => __('Tipo'),
+                    'label_title' => __('Tipom'),
                     'default' => 'text',
                     'options' => [
                         'text' => 'Texto',
