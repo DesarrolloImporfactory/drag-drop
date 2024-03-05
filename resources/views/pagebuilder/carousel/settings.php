@@ -2,33 +2,54 @@
 
 return [
     'id' => 'carousel',
-    'name' => __('Codigo HTML'),
+    'name' => __('Carousel de imagenes'),
     'icon' => '<i class="bx bxs-carousel"></i>',
-    'tab' => "Codigo",
+    'tab' => "Ecommerce",
     'fields' => [
         [
-            'id'            => 'codigo_html',
-            'type'          => 'text',
-            'value'         => '',
-            'class'         => '',
-            'label_title'   => __('Codigo HTML'),
-            'placeholder'   => __('Codigo HTML'),
-            'hint'     => [
-                'content' => __('Codigo HTML'),
+            'id'            => 'image_1',
+            'type'          => 'file',
+            'field_desc' => __('Solo .jpg,.png permitido y tamaño máximo es 3MB'),
+            'max_size' => 3, // size in MB
+            'ext' => [
+                'jpg',
+                'png',
             ],
+            'label_title'   => __('Imagen')
         ],
         [
-            'id'            => 'codigo_css',
-            'type'          => 'text',
-            'value'         => '',
-            'class'         => '',
-            'label_title'   => __('Codigo CSS'),
-            'placeholder'   => __('Codigo CSS'),
-            'hint'     => [
-                'content' => __('Para agregar estilos CSS, debes agregar el codigo CSS con la etiqueta <style>'),
+            'id'            => 'image_2',
+            'type'          => 'file',
+            'field_desc' => __('Solo .jpg,.png permitido y tamaño máximo es 3MB'),
+            'max_size' => 3, // size in MB
+            'ext' => [
+                'jpg',
+                'png',
             ],
+            'label_title'   => __('Imagen')
+        ],
+        [
+            'id'            => 'image_3',
+            'type'          => 'file',
+            'field_desc' => __('Solo .jpg,.png permitido y tamaño máximo es 3MB'),
+            'max_size' => 3, // size in MB
+            'ext' => [
+                'jpg',
+                'png',
+            ],
+            'label_title'   => __('Imagen')
+        ],
 
+        [
+            'id'            => 'tiempo',
+            'type'          => 'text',
+            'value'         => '5000',
+            'class'         => '',
+            'label_title'   => __('Tiempo de transición'),
+            'placeholder'   => __('Tiempo de transición'),
+            'hint'     => [
+                'content' => __('Tiempo de transición'),
+            ],
         ]
-
     ]
 ];
