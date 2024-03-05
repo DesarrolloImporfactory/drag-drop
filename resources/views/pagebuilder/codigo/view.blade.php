@@ -11,8 +11,9 @@
 @pushonce(config('pagebuilder.site_script_var'))
 
 <script>
-    {{ pagesetting("codigo_js") }}
+    {!! pagesetting("codigo_js") !!}
 </script>
 @endpushonce
 {!! pagesetting("codigo_html") !!}
+
 
