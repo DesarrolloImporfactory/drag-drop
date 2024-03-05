@@ -17,8 +17,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-$authMiddleware = ["auth"];
-$permissionMiddleware = ["permission:manage_pages"];
+
 
 
 
