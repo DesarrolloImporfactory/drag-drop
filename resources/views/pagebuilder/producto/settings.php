@@ -28,17 +28,7 @@ return [
                 'content' => __('Nombre Producto'),
             ],
         ],
-        [
-            'id'            => 'descripcion_producto',
-            'type'          => 'editor',
-            'value'         => 'producto de la página',
-            'class'         => '',
-            'label_title'   => __('Descripcion Producto'),
-            'placeholder'   => __('Descripcion Producto'),
-            'hint'     => [
-                'content' => __('Descripcion Producto'),
-            ],
-        ],
+
         [
             'id'            => 'precio_producto',
             'type'          => 'text',

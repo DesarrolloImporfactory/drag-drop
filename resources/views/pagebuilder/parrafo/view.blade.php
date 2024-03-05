@@ -1,5 +1,5 @@
 <div class="tmp-cabecera">
-    <p>{{pagesetting('parrafo')}}</p>
+    <p>{!! pagesetting('parrafo') !!}</p>
    
   </div>
 

@@ -7,28 +7,28 @@
         btn-{{ pagesetting('size') }}   
         "
         {{ pagesetting('disabled') == 'disabled' ? 'disabled' : '' }} 
->
-    @php
-        if(pagesetting('icon-align') == 'left' )
-            echo '<i class="' . pagesetting('icon') . ' fs-' . pagesetting('icon-size') . '"></i>';
-        else {
-            echo "";
-        }
-    @endphp
+>   
+
+   
     <a class="text-decoration-none text-{{ pagesetting('texto_color') }} d-flex justify-content-center align-items-center" href="{{ pagesetting('link') }}" target="{{ pagesetting('target') }}">
         @if(pagesetting('animation') && pagesetting('icon-align') == 'left')
-            <i class="{{ pagesetting('animation') }} {{ pagesetting('icon-size') }}"></i>
+        <span class="d-flex justify-content-center align-items-center {{ pagesetting('icon-size') }}">
+            
+            {!! pagesetting('animation') !!}
+        </span>
         @endif
 
         {{ pagesetting('texto') }}
 
-        @php
-            if(pagesetting('icon-align') == 'right' )
-                echo '<i class="' . pagesetting('animation') . ' fs-' . pagesetting('icon-size') . '"></i>';
-            else {
-                echo "";
-            }
-        @endphp
+        @if(pagesetting('icon-align') == 'right' )
+        
+
+            <span class="d-flex justify-content-center align-items-center {{ pagesetting('icon-size') }}">
+                {!! pagesetting('animation') !!}
+            </span>
+            
+        
+        @endif
     </a>
 </button>
 
