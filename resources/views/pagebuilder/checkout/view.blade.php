@@ -488,7 +488,7 @@ if (!isset($_SESSION["comprar"])) {
         form.appendChild(input);
         input = document.createElement('input');
         input.type = "text";
-        input.name = "referenobservacioncia_opcional";
+        input.name = "observacion";
         input.value = referencia_opcional;
         form.appendChild(input);
         input = document.createElement('input');
