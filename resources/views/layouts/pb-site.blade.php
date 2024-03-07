@@ -20,6 +20,7 @@
         <link rel="stylesheet" href="{{ asset('demo/css/demo.css') }}">
         
         @stack(config('pagebuilder.style_var'))
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
     </head>
     <body>

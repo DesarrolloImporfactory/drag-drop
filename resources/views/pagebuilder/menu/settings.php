@@ -4,7 +4,7 @@ return [
     'id' => 'menu',
     'name' => __('Menu'),
     'icon' => '<i class="bx bx-image-alt" ></i>',
-    'tab' => "Pagina",
+    'tab' => "Pagina principal",
     'fields' => [
         [
             'id' => 'menusA',
