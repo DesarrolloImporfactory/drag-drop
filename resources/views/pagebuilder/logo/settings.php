@@ -1,32 +1,32 @@
 <?php
 
 return [
-    'id' => 'imagen',
-    'name' => __('Imagen'),
+    'id' => 'logo',
+    'name' => __('Logo'),
     'icon' => '<i class="bx bx-image-alt" ></i>',
     'tab' => "Pagina principal",
     'fields' => [
         [
-            'id'            => 'image',
+            'id'            => 'logo',
             'type'          => 'file',
             'field_desc' => __('Solo .jpg,.png permitido y tamaño máximo es 3MB'),
             'max_size' => 3, // size in MB
             'ext' => [
                 'jpg',
                 'png',
-                'webp',
+                'webp'
             ],
-            'label_title'   => __('Imagen')
+            'label_title'   => __('logo')
         ],
         [
-            'id'            => 'caption_image',
+            'id'            => 'caption_logo',
             'type'          => 'text',
             'value'         => 'Fotografía técnica con dimensión',
             'class'         => '',
-            'label_title'   => __('Leyenda de la imagen'),
-            'placeholder'   => __('Leyenda de la imagen'),
+            'label_title'   => __('Leyenda de la logo'),
+            'placeholder'   => __('Leyenda de la logo'),
             'hint'     => [
-                'content' => __('Leyenda de la imagen'),
+                'content' => __('Leyenda de la logon'),
             ],
         ],
         [
@@ -34,10 +34,10 @@ return [
             'type'          => 'text',
             'value'         => '100px',
             'class'         => '',
-            'label_title'   => __('Ancho de la imagen'),
-            'placeholder'   => __('Ancho de la imagen'),
+            'label_title'   => __('Ancho de la logo'),
+            'placeholder'   => __('Ancho de la logo'),
             'hint'     => [
-                'content' => __('Ancho de la imagen'),
+                'content' => __('Ancho de la logon'),
             ],
         ],
         [
@@ -45,10 +45,10 @@ return [
             'type'          => 'text',
             'value'         => '100',
             'class'         => '',
-            'label_title'   => __('Alto de la imagen'),
-            'placeholder'   => __('Alto de la imagen'),
+            'label_title'   => __('Alto de la logo'),
+            'placeholder'   => __('Alto de la logo'),
             'hint'     => [
-                'content' => __('Alto de la imagen'),
+                'content' => __('Alto de la logon'),
             ],
         ],
 
