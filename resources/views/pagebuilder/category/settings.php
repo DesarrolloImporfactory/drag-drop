@@ -17,17 +17,17 @@ $origen = mysqli_fetch_assoc($result);
 
 
 $archivo_tienda =  $origen['origen_url'] . '/sysadmin/vistas/db1.php';
-$archivo_destino_tienda = $origen['origen_url'] . "/sysadmin/vistas/db_destino_guia.php";
+$archivo_destino_tienda = "../db_destino_guia.php";
 $contenido_tienda = file_get_contents($archivo_tienda);
 $get_data = json_decode($contenido_tienda, true);
 if (file_put_contents($archivo_destino_tienda, $contenido_tienda) !== false) {
-    $host_d = $get_data['DB_HOST'];
+
     $user_d = $get_data['DB_USER'];
     $pass_d = $get_data['DB_PASS'];
     $base_d = $get_data['DB_NAME'];
     // Conexión a la base de datos de la tienda, establece la hora -5 GTM
     date_default_timezone_set('America/Guayaquil');
-    $tienda_db = mysqli_connect($host_d, $user_d, $pass_d, $base_d);
+    $tienda_db = mysqli_connect("194.163.183.231", $user_d, $pass_d, $base_d);
     if (!$conexion) {
         die("Connection failed: " . mysqli_connect_error());
     }
