@@ -73,7 +73,7 @@ return [
             'name' => 'link_category',
             'type' => 'text',
             'label_title' => __('Enlace'),
-
+            'placeholder' => __('Enlace'),
             'value' => $origen['origen_url'] . $categoria_link
         ]
 
